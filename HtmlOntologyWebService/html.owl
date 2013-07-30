@@ -1,0 +1,1212 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.vitorfs.com/ontology/html.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.vitorfs.com/ontology/html.owl">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">The html ontology that describe html documents based on the semantic of its tags</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#A"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#B"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Body"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Br"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Button"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CheckboxInput"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ContentTag"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DesorderedList"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Div"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Document"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Em"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Form"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FormInputs"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Formatter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Forms"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#H1"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#H2"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#H3"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#H4"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#H5"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#H6"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Head"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hr"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Html"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#I"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Img"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Input"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Label"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Layout"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Li"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Link"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#List"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Meta"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MetaTag"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ol"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OrderedList"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#P"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PasswordInput"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RadioInput"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Script"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Span"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Strong"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StructureTag"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Style"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Table"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tabular"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tag"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Td"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TextInput"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Th"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Title"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tr"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Typography"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#U"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ul"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasChild"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasFormChild"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasFormParent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasListChild"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasListParent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasParent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSibling"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTableChild"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTableParent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isDesordered"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isOrdered"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasButtonType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDisplay"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasFontSize"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasFontStyle"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasFontWeight"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasFormMethod"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasInputType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasTextDecoration"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#B"/>
+        <Class IRI="#Strong"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#CheckboxInput"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#FormInputs"/>
+            <DataHasValue>
+                <DataProperty IRI="#hasInputType"/>
+                <Literal datatypeIRI="&rdf;PlainLiteral">checkbox</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Em"/>
+        <Class IRI="#I"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#PasswordInput"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#FormInputs"/>
+            <DataHasValue>
+                <DataProperty IRI="#hasInputType"/>
+                <Literal datatypeIRI="&rdf;PlainLiteral">password</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#RadioInput"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#FormInputs"/>
+            <DataHasValue>
+                <DataProperty IRI="#hasInputType"/>
+                <Literal datatypeIRI="&rdf;PlainLiteral">radio</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#TextInput"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#FormInputs"/>
+            <DataHasValue>
+                <DataProperty IRI="#hasInputType"/>
+                <Literal datatypeIRI="&rdf;PlainLiteral">text</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#A"/>
+        <Class IRI="#ContentTag"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#B"/>
+        <Class IRI="#Formatter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#B"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasFontWeight"/>
+            <Literal datatypeIRI="&xsd;integer">700</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Body"/>
+        <Class IRI="#StructureTag"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Body"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasChild"/>
+            <Class IRI="#ContentTag"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Body"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasParent"/>
+            <Class IRI="#Html"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Body"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasSibling"/>
+            <Class IRI="#Head"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Br"/>
+        <Class IRI="#ContentTag"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Br"/>
+        <ObjectExactCardinality cardinality="0">
+            <ObjectProperty IRI="#hasChild"/>
+            <Class IRI="#Tag"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Button"/>
+        <Class IRI="#Forms"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Button"/>
+        <ObjectUnionOf>
+            <DataHasValue>
+                <DataProperty IRI="#hasButtonType"/>
+                <Literal datatypeIRI="&rdf;PlainLiteral">button</Literal>
+            </DataHasValue>
+            <DataHasValue>
+                <DataProperty IRI="#hasButtonType"/>
+                <Literal datatypeIRI="&rdf;PlainLiteral">reset</Literal>
+            </DataHasValue>
+            <DataHasValue>
+                <DataProperty IRI="#hasButtonType"/>
+                <Literal datatypeIRI="&rdf;PlainLiteral">submit</Literal>
+            </DataHasValue>
+        </ObjectUnionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Button"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasFormParent"/>
+            <Class IRI="#Form"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ContentTag"/>
+        <Class IRI="#Tag"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DesorderedList"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasListChild"/>
+            <Class IRI="#Li"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DesorderedList"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasListParent"/>
+            <Class IRI="#Ul"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Div"/>
+        <Class IRI="#Layout"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Div"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasDisplay"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">block</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Em"/>
+        <Class IRI="#Formatter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Form"/>
+        <Class IRI="#Forms"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Form"/>
+        <ObjectUnionOf>
+            <DataHasValue>
+                <DataProperty IRI="#hasFormMethod"/>
+                <Literal datatypeIRI="&rdf;PlainLiteral">get</Literal>
+            </DataHasValue>
+            <DataHasValue>
+                <DataProperty IRI="#hasFormMethod"/>
+                <Literal datatypeIRI="&rdf;PlainLiteral">post</Literal>
+            </DataHasValue>
+        </ObjectUnionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Form"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasFormChild"/>
+            <Class IRI="#Button"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Form"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasFormChild"/>
+            <Class IRI="#Input"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Form"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasFormChild"/>
+            <Class IRI="#Label"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Formatter"/>
+        <Class IRI="#ContentTag"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Forms"/>
+        <Class IRI="#ContentTag"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#H1"/>
+        <Class IRI="#Typography"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#H1"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasFontSize"/>
+            <Literal datatypeIRI="&xsd;integer">32</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#H1"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasFontWeight"/>
+            <Literal datatypeIRI="&xsd;integer">700</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#H2"/>
+        <Class IRI="#Typography"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#H2"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasFontSize"/>
+            <Literal datatypeIRI="&xsd;integer">24</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#H2"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasFontWeight"/>
+            <Literal datatypeIRI="&xsd;integer">700</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#H3"/>
+        <Class IRI="#Typography"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#H3"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasFontSize"/>
+            <Literal datatypeIRI="&xsd;integer">18</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#H3"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasFontWeight"/>
+            <Literal datatypeIRI="&xsd;integer">700</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#H4"/>
+        <Class IRI="#Typography"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#H4"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasFontSize"/>
+            <Literal datatypeIRI="&xsd;integer">14</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#H4"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasFontWeight"/>
+            <Literal datatypeIRI="&xsd;integer">700</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#H5"/>
+        <Class IRI="#Typography"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#H5"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasFontSize"/>
+            <Literal datatypeIRI="&xsd;integer">12</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#H5"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasFontWeight"/>
+            <Literal datatypeIRI="&xsd;integer">700</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#H6"/>
+        <Class IRI="#Typography"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#H6"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasFontSize"/>
+            <Literal datatypeIRI="&xsd;integer">10</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#H6"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasFontWeight"/>
+            <Literal datatypeIRI="&xsd;integer">700</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Head"/>
+        <Class IRI="#StructureTag"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Head"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasChild"/>
+            <Class IRI="#MetaTag"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Head"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasParent"/>
+            <Class IRI="#Html"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Head"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasSibling"/>
+            <Class IRI="#Body"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hr"/>
+        <Class IRI="#ContentTag"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hr"/>
+        <ObjectExactCardinality cardinality="0">
+            <ObjectProperty IRI="#hasChild"/>
+            <Class IRI="#Tag"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Html"/>
+        <Class IRI="#StructureTag"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Html"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasChild"/>
+            <Class IRI="#Body"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Html"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasChild"/>
+            <Class IRI="#Head"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Html"/>
+        <ObjectExactCardinality cardinality="0">
+            <ObjectProperty IRI="#hasParent"/>
+            <Class IRI="#Tag"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#I"/>
+        <Class IRI="#Formatter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#I"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasFontStyle"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">italic</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Img"/>
+        <Class IRI="#ContentTag"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Img"/>
+        <ObjectExactCardinality cardinality="0">
+            <ObjectProperty IRI="#hasChild"/>
+            <Class IRI="#Tag"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Input"/>
+        <Class IRI="#Forms"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Input"/>
+        <ObjectUnionOf>
+            <DataHasValue>
+                <DataProperty IRI="#hasInputType"/>
+                <Literal datatypeIRI="&rdf;PlainLiteral">checkbox</Literal>
+            </DataHasValue>
+            <DataHasValue>
+                <DataProperty IRI="#hasInputType"/>
+                <Literal datatypeIRI="&rdf;PlainLiteral">password</Literal>
+            </DataHasValue>
+            <DataHasValue>
+                <DataProperty IRI="#hasInputType"/>
+                <Literal datatypeIRI="&rdf;PlainLiteral">radio</Literal>
+            </DataHasValue>
+            <DataHasValue>
+                <DataProperty IRI="#hasInputType"/>
+                <Literal datatypeIRI="&rdf;PlainLiteral">text</Literal>
+            </DataHasValue>
+        </ObjectUnionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Input"/>
+        <ObjectExactCardinality cardinality="0">
+            <ObjectProperty IRI="#hasFormChild"/>
+            <Class IRI="#Tag"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Input"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasFormParent"/>
+            <Class IRI="#Form"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Label"/>
+        <Class IRI="#Forms"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Label"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasFormParent"/>
+            <Class IRI="#Form"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Layout"/>
+        <Class IRI="#ContentTag"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Li"/>
+        <Class IRI="#List"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Li"/>
+        <ObjectUnionOf>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasListParent"/>
+                <Class IRI="#Ol"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasListParent"/>
+                <Class IRI="#Ul"/>
+            </ObjectExactCardinality>
+        </ObjectUnionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Link"/>
+        <Class IRI="#MetaTag"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#List"/>
+        <Class IRI="#ContentTag"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Meta"/>
+        <Class IRI="#MetaTag"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MetaTag"/>
+        <Class IRI="#Tag"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ol"/>
+        <Class IRI="#List"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ol"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasListChild"/>
+            <Class IRI="#Li"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ol"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isOrdered"/>
+            <Class IRI="#OrderedList"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OrderedList"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasListChild"/>
+            <Class IRI="#Li"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OrderedList"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasListParent"/>
+            <Class IRI="#Ol"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#P"/>
+        <Class IRI="#Typography"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#P"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasFontSize"/>
+            <Literal datatypeIRI="&xsd;integer">14</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#P"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasFontWeight"/>
+            <Literal datatypeIRI="&xsd;integer">400</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Script"/>
+        <Class IRI="#MetaTag"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Span"/>
+        <Class IRI="#Layout"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Span"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasDisplay"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">inline</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Strong"/>
+        <Class IRI="#Formatter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StructureTag"/>
+        <Class IRI="#Tag"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Style"/>
+        <Class IRI="#MetaTag"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Table"/>
+        <Class IRI="#Tabular"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Table"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasTableChild"/>
+            <Class IRI="#Tr"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tabular"/>
+        <Class IRI="#ContentTag"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Td"/>
+        <Class IRI="#Tabular"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Td"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasTableParent"/>
+            <Class IRI="#Tr"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Th"/>
+        <Class IRI="#Tabular"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Th"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasTableParent"/>
+            <Class IRI="#Tr"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Title"/>
+        <Class IRI="#MetaTag"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Title"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasDisplay"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">none</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tr"/>
+        <Class IRI="#Tabular"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tr"/>
+        <ObjectUnionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasTableChild"/>
+                <Class IRI="#Td"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasTableChild"/>
+                <Class IRI="#Th"/>
+            </ObjectSomeValuesFrom>
+        </ObjectUnionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tr"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasTableParent"/>
+            <Class IRI="#Table"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Typography"/>
+        <Class IRI="#ContentTag"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#U"/>
+        <Class IRI="#Formatter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#U"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasTextDecoration"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">underline</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ul"/>
+        <Class IRI="#List"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ul"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasListChild"/>
+            <Class IRI="#Li"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ul"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isDesordered"/>
+            <Class IRI="#DesorderedList"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#A"/>
+        <Class IRI="#Br"/>
+        <Class IRI="#Formatter"/>
+        <Class IRI="#Forms"/>
+        <Class IRI="#Hr"/>
+        <Class IRI="#Img"/>
+        <Class IRI="#Layout"/>
+        <Class IRI="#List"/>
+        <Class IRI="#Tabular"/>
+        <Class IRI="#Typography"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Body"/>
+        <Class IRI="#Head"/>
+        <Class IRI="#Html"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Button"/>
+        <Class IRI="#Form"/>
+        <Class IRI="#Input"/>
+        <Class IRI="#Label"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#CheckboxInput"/>
+        <Class IRI="#PasswordInput"/>
+        <Class IRI="#RadioInput"/>
+        <Class IRI="#TextInput"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Div"/>
+        <Class IRI="#Span"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Em"/>
+        <Class IRI="#Strong"/>
+        <Class IRI="#U"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#H1"/>
+        <Class IRI="#H2"/>
+        <Class IRI="#H3"/>
+        <Class IRI="#H4"/>
+        <Class IRI="#H5"/>
+        <Class IRI="#H6"/>
+        <Class IRI="#P"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Li"/>
+        <Class IRI="#Ol"/>
+        <Class IRI="#Ul"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Link"/>
+        <Class IRI="#Meta"/>
+        <Class IRI="#Script"/>
+        <Class IRI="#Style"/>
+        <Class IRI="#Title"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Table"/>
+        <Class IRI="#Td"/>
+        <Class IRI="#Th"/>
+        <Class IRI="#Tr"/>
+    </DisjointClasses>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasChild"/>
+        <ObjectProperty IRI="#hasParent"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasFormParent"/>
+        <ObjectProperty IRI="#hasFormChild"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasListChild"/>
+        <ObjectProperty IRI="#hasListParent"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasSibling"/>
+        <ObjectProperty IRI="#hasSibling"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasTableChild"/>
+        <ObjectProperty IRI="#hasTableParent"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasFormParent"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasListParent"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasParent"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasTableParent"/>
+    </FunctionalObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#hasSibling"/>
+    </SymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#hasChild"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#hasFormChild"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#hasFormParent"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#hasListChild"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#hasTableChild"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#hasTableParent"/>
+    </AsymmetricObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasChild"/>
+        <Class IRI="#Tag"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasFormChild"/>
+        <Class IRI="#Forms"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasFormParent"/>
+        <Class IRI="#Forms"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasListChild"/>
+        <Class IRI="#List"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasListParent"/>
+        <Class IRI="#List"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasParent"/>
+        <Class IRI="#Tag"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSibling"/>
+        <Class IRI="#Tag"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasTableChild"/>
+        <Class IRI="#Tabular"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasTableParent"/>
+        <Class IRI="#Tabular"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isDesordered"/>
+        <Class IRI="#List"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isOrdered"/>
+        <Class IRI="#List"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasChild"/>
+        <Class IRI="#Tag"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasFormChild"/>
+        <Class IRI="#Forms"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasFormParent"/>
+        <Class IRI="#Forms"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasListChild"/>
+        <Class IRI="#List"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasListParent"/>
+        <Class IRI="#List"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasParent"/>
+        <Class IRI="#Tag"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSibling"/>
+        <Class IRI="#Tag"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasTableChild"/>
+        <Class IRI="#Tabular"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasTableParent"/>
+        <Class IRI="#Tabular"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isDesordered"/>
+        <Class IRI="#DesorderedList"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isOrdered"/>
+        <Class IRI="#OrderedList"/>
+    </ObjectPropertyRange>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasButtonType"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasDisplay"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasFontSize"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasFontStyle"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasFontWeight"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasFormMethod"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasTextDecoration"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasButtonType"/>
+        <Class IRI="#Button"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasDisplay"/>
+        <Class IRI="#Tag"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasFontSize"/>
+        <Class IRI="#ContentTag"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasFontStyle"/>
+        <Class IRI="#ContentTag"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasFontWeight"/>
+        <Class IRI="#ContentTag"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasFormMethod"/>
+        <Class IRI="#Form"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasInputType"/>
+        <Class IRI="#Input"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasTextDecoration"/>
+        <Class IRI="#ContentTag"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasButtonType"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasDisplay"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasFontSize"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasFontStyle"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasFontWeight"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasFormMethod"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasInputType"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasTextDecoration"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

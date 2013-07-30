@@ -1,0 +1,1236 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <Ontology rdf:about="http://www.vitorfs.com/ontology/html.owl">
+        <rdfs:comment>The html ontology that describe html documents based on the semantic of its tags</rdfs:comment>
+    </Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#hasChild -->
+
+    <ObjectProperty rdf:about="http://www.vitorfs.com/ontology/html.owl#hasChild">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.vitorfs.com/ontology/html.owl#Tag"/>
+        <rdfs:range rdf:resource="http://www.vitorfs.com/ontology/html.owl#Tag"/>
+        <inverseOf rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasParent"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#hasFormChild -->
+
+    <ObjectProperty rdf:about="http://www.vitorfs.com/ontology/html.owl#hasFormChild">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdfs:range rdf:resource="http://www.vitorfs.com/ontology/html.owl#Forms"/>
+        <rdfs:domain rdf:resource="http://www.vitorfs.com/ontology/html.owl#Forms"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#hasFormParent -->
+
+    <ObjectProperty rdf:about="http://www.vitorfs.com/ontology/html.owl#hasFormParent">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.vitorfs.com/ontology/html.owl#Forms"/>
+        <rdfs:domain rdf:resource="http://www.vitorfs.com/ontology/html.owl#Forms"/>
+        <inverseOf rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasFormChild"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#hasListChild -->
+
+    <ObjectProperty rdf:about="http://www.vitorfs.com/ontology/html.owl#hasListChild">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdfs:range rdf:resource="http://www.vitorfs.com/ontology/html.owl#List"/>
+        <rdfs:domain rdf:resource="http://www.vitorfs.com/ontology/html.owl#List"/>
+        <inverseOf rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasListParent"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#hasListParent -->
+
+    <ObjectProperty rdf:about="http://www.vitorfs.com/ontology/html.owl#hasListParent">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.vitorfs.com/ontology/html.owl#List"/>
+        <rdfs:range rdf:resource="http://www.vitorfs.com/ontology/html.owl#List"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#hasParent -->
+
+    <ObjectProperty rdf:about="http://www.vitorfs.com/ontology/html.owl#hasParent">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.vitorfs.com/ontology/html.owl#Tag"/>
+        <rdfs:domain rdf:resource="http://www.vitorfs.com/ontology/html.owl#Tag"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#hasSibling -->
+
+    <ObjectProperty rdf:about="http://www.vitorfs.com/ontology/html.owl#hasSibling">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.vitorfs.com/ontology/html.owl#Tag"/>
+        <rdfs:range rdf:resource="http://www.vitorfs.com/ontology/html.owl#Tag"/>
+        <inverseOf rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasSibling"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#hasTableChild -->
+
+    <ObjectProperty rdf:about="http://www.vitorfs.com/ontology/html.owl#hasTableChild">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdfs:range rdf:resource="http://www.vitorfs.com/ontology/html.owl#Tabular"/>
+        <rdfs:domain rdf:resource="http://www.vitorfs.com/ontology/html.owl#Tabular"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#hasTableParent -->
+
+    <ObjectProperty rdf:about="http://www.vitorfs.com/ontology/html.owl#hasTableParent">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.vitorfs.com/ontology/html.owl#Tabular"/>
+        <rdfs:range rdf:resource="http://www.vitorfs.com/ontology/html.owl#Tabular"/>
+        <inverseOf rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasTableChild"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#isDesordered -->
+
+    <ObjectProperty rdf:about="http://www.vitorfs.com/ontology/html.owl#isDesordered">
+        <rdfs:range rdf:resource="http://www.vitorfs.com/ontology/html.owl#DesorderedList"/>
+        <rdfs:domain rdf:resource="http://www.vitorfs.com/ontology/html.owl#List"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#isOrdered -->
+
+    <ObjectProperty rdf:about="http://www.vitorfs.com/ontology/html.owl#isOrdered">
+        <rdfs:domain rdf:resource="http://www.vitorfs.com/ontology/html.owl#List"/>
+        <rdfs:range rdf:resource="http://www.vitorfs.com/ontology/html.owl#OrderedList"/>
+    </ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#hasButtonType -->
+
+    <DatatypeProperty rdf:about="http://www.vitorfs.com/ontology/html.owl#hasButtonType">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.vitorfs.com/ontology/html.owl#Button"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#hasDisplay -->
+
+    <DatatypeProperty rdf:about="http://www.vitorfs.com/ontology/html.owl#hasDisplay">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.vitorfs.com/ontology/html.owl#Tag"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#hasFontSize -->
+
+    <DatatypeProperty rdf:about="http://www.vitorfs.com/ontology/html.owl#hasFontSize">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.vitorfs.com/ontology/html.owl#ContentTag"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#hasFontStyle -->
+
+    <DatatypeProperty rdf:about="http://www.vitorfs.com/ontology/html.owl#hasFontStyle">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.vitorfs.com/ontology/html.owl#ContentTag"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#hasFontWeight -->
+
+    <DatatypeProperty rdf:about="http://www.vitorfs.com/ontology/html.owl#hasFontWeight">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.vitorfs.com/ontology/html.owl#ContentTag"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#hasFormMethod -->
+
+    <DatatypeProperty rdf:about="http://www.vitorfs.com/ontology/html.owl#hasFormMethod">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.vitorfs.com/ontology/html.owl#Form"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#hasInputType -->
+
+    <DatatypeProperty rdf:about="http://www.vitorfs.com/ontology/html.owl#hasInputType">
+        <rdfs:domain rdf:resource="http://www.vitorfs.com/ontology/html.owl#Input"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#hasTextDecoration -->
+
+    <DatatypeProperty rdf:about="http://www.vitorfs.com/ontology/html.owl#hasTextDecoration">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.vitorfs.com/ontology/html.owl#ContentTag"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#A -->
+
+    <Class rdf:about="http://www.vitorfs.com/ontology/html.owl#A">
+        <rdfs:subClassOf rdf:resource="http://www.vitorfs.com/ontology/html.owl#ContentTag"/>
+    </Class>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#B -->
+
+    <Class rdf:about="http://www.vitorfs.com/ontology/html.owl#B">
+        <equivalentClass rdf:resource="http://www.vitorfs.com/ontology/html.owl#Strong"/>
+        <rdfs:subClassOf rdf:resource="http://www.vitorfs.com/ontology/html.owl#Formatter"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasFontWeight"/>
+                <hasValue rdf:datatype="&xsd;integer">700</hasValue>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#Body -->
+
+    <Class rdf:about="http://www.vitorfs.com/ontology/html.owl#Body">
+        <rdfs:subClassOf rdf:resource="http://www.vitorfs.com/ontology/html.owl#StructureTag"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasChild"/>
+                <someValuesFrom rdf:resource="http://www.vitorfs.com/ontology/html.owl#ContentTag"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasParent"/>
+                <onClass rdf:resource="http://www.vitorfs.com/ontology/html.owl#Html"/>
+                <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasSibling"/>
+                <onClass rdf:resource="http://www.vitorfs.com/ontology/html.owl#Head"/>
+                <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#Br -->
+
+    <Class rdf:about="http://www.vitorfs.com/ontology/html.owl#Br">
+        <rdfs:subClassOf rdf:resource="http://www.vitorfs.com/ontology/html.owl#ContentTag"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasChild"/>
+                <onClass rdf:resource="http://www.vitorfs.com/ontology/html.owl#Tag"/>
+                <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</qualifiedCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#Button -->
+
+    <Class rdf:about="http://www.vitorfs.com/ontology/html.owl#Button">
+        <rdfs:subClassOf rdf:resource="http://www.vitorfs.com/ontology/html.owl#Forms"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasFormParent"/>
+                <onClass rdf:resource="http://www.vitorfs.com/ontology/html.owl#Form"/>
+                <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasButtonType"/>
+                        <hasValue>button</hasValue>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasButtonType"/>
+                        <hasValue>reset</hasValue>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasButtonType"/>
+                        <hasValue>submit</hasValue>
+                    </Restriction>
+                </unionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#CheckboxInput -->
+
+    <Class rdf:about="http://www.vitorfs.com/ontology/html.owl#CheckboxInput">
+        <equivalentClass>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.vitorfs.com/ontology/html.owl#FormInputs"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasInputType"/>
+                        <hasValue>checkbox</hasValue>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </equivalentClass>
+    </Class>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#ContentTag -->
+
+    <Class rdf:about="http://www.vitorfs.com/ontology/html.owl#ContentTag">
+        <rdfs:subClassOf rdf:resource="http://www.vitorfs.com/ontology/html.owl#Tag"/>
+    </Class>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#DesorderedList -->
+
+    <Class rdf:about="http://www.vitorfs.com/ontology/html.owl#DesorderedList">
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasListChild"/>
+                <someValuesFrom rdf:resource="http://www.vitorfs.com/ontology/html.owl#Li"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasListParent"/>
+                <onClass rdf:resource="http://www.vitorfs.com/ontology/html.owl#Ul"/>
+                <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#Div -->
+
+    <Class rdf:about="http://www.vitorfs.com/ontology/html.owl#Div">
+        <rdfs:subClassOf rdf:resource="http://www.vitorfs.com/ontology/html.owl#Layout"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasDisplay"/>
+                <hasValue>block</hasValue>
+            </Restriction>
+        </rdfs:subClassOf>
+        <disjointWith rdf:resource="http://www.vitorfs.com/ontology/html.owl#Span"/>
+    </Class>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#Document -->
+
+    <Class rdf:about="http://www.vitorfs.com/ontology/html.owl#Document"/>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#Em -->
+
+    <Class rdf:about="http://www.vitorfs.com/ontology/html.owl#Em">
+        <equivalentClass rdf:resource="http://www.vitorfs.com/ontology/html.owl#I"/>
+        <rdfs:subClassOf rdf:resource="http://www.vitorfs.com/ontology/html.owl#Formatter"/>
+    </Class>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#Form -->
+
+    <Class rdf:about="http://www.vitorfs.com/ontology/html.owl#Form">
+        <rdfs:subClassOf rdf:resource="http://www.vitorfs.com/ontology/html.owl#Forms"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasFormChild"/>
+                <someValuesFrom rdf:resource="http://www.vitorfs.com/ontology/html.owl#Button"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasFormMethod"/>
+                        <hasValue>get</hasValue>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasFormMethod"/>
+                        <hasValue>post</hasValue>
+                    </Restriction>
+                </unionOf>
+            </Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasFormChild"/>
+                <someValuesFrom rdf:resource="http://www.vitorfs.com/ontology/html.owl#Input"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasFormChild"/>
+                <someValuesFrom rdf:resource="http://www.vitorfs.com/ontology/html.owl#Label"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#FormInputs -->
+
+    <Class rdf:about="http://www.vitorfs.com/ontology/html.owl#FormInputs"/>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#Formatter -->
+
+    <Class rdf:about="http://www.vitorfs.com/ontology/html.owl#Formatter">
+        <rdfs:subClassOf rdf:resource="http://www.vitorfs.com/ontology/html.owl#ContentTag"/>
+    </Class>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#Forms -->
+
+    <Class rdf:about="http://www.vitorfs.com/ontology/html.owl#Forms">
+        <rdfs:subClassOf rdf:resource="http://www.vitorfs.com/ontology/html.owl#ContentTag"/>
+    </Class>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#H1 -->
+
+    <Class rdf:about="http://www.vitorfs.com/ontology/html.owl#H1">
+        <rdfs:subClassOf rdf:resource="http://www.vitorfs.com/ontology/html.owl#Typography"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasFontWeight"/>
+                <hasValue rdf:datatype="&xsd;integer">700</hasValue>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasFontSize"/>
+                <hasValue rdf:datatype="&xsd;integer">32</hasValue>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#H2 -->
+
+    <Class rdf:about="http://www.vitorfs.com/ontology/html.owl#H2">
+        <rdfs:subClassOf rdf:resource="http://www.vitorfs.com/ontology/html.owl#Typography"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasFontWeight"/>
+                <hasValue rdf:datatype="&xsd;integer">700</hasValue>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasFontSize"/>
+                <hasValue rdf:datatype="&xsd;integer">24</hasValue>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#H3 -->
+
+    <Class rdf:about="http://www.vitorfs.com/ontology/html.owl#H3">
+        <rdfs:subClassOf rdf:resource="http://www.vitorfs.com/ontology/html.owl#Typography"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasFontSize"/>
+                <hasValue rdf:datatype="&xsd;integer">18</hasValue>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasFontWeight"/>
+                <hasValue rdf:datatype="&xsd;integer">700</hasValue>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#H4 -->
+
+    <Class rdf:about="http://www.vitorfs.com/ontology/html.owl#H4">
+        <rdfs:subClassOf rdf:resource="http://www.vitorfs.com/ontology/html.owl#Typography"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasFontWeight"/>
+                <hasValue rdf:datatype="&xsd;integer">700</hasValue>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasFontSize"/>
+                <hasValue rdf:datatype="&xsd;integer">14</hasValue>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#H5 -->
+
+    <Class rdf:about="http://www.vitorfs.com/ontology/html.owl#H5">
+        <rdfs:subClassOf rdf:resource="http://www.vitorfs.com/ontology/html.owl#Typography"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasFontWeight"/>
+                <hasValue rdf:datatype="&xsd;integer">700</hasValue>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasFontSize"/>
+                <hasValue rdf:datatype="&xsd;integer">12</hasValue>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#H6 -->
+
+    <Class rdf:about="http://www.vitorfs.com/ontology/html.owl#H6">
+        <rdfs:subClassOf rdf:resource="http://www.vitorfs.com/ontology/html.owl#Typography"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasFontWeight"/>
+                <hasValue rdf:datatype="&xsd;integer">700</hasValue>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasFontSize"/>
+                <hasValue rdf:datatype="&xsd;integer">10</hasValue>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#Head -->
+
+    <Class rdf:about="http://www.vitorfs.com/ontology/html.owl#Head">
+        <rdfs:subClassOf rdf:resource="http://www.vitorfs.com/ontology/html.owl#StructureTag"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasChild"/>
+                <someValuesFrom rdf:resource="http://www.vitorfs.com/ontology/html.owl#MetaTag"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasParent"/>
+                <onClass rdf:resource="http://www.vitorfs.com/ontology/html.owl#Html"/>
+                <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasSibling"/>
+                <onClass rdf:resource="http://www.vitorfs.com/ontology/html.owl#Body"/>
+                <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#Hr -->
+
+    <Class rdf:about="http://www.vitorfs.com/ontology/html.owl#Hr">
+        <rdfs:subClassOf rdf:resource="http://www.vitorfs.com/ontology/html.owl#ContentTag"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasChild"/>
+                <onClass rdf:resource="http://www.vitorfs.com/ontology/html.owl#Tag"/>
+                <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</qualifiedCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#Html -->
+
+    <Class rdf:about="http://www.vitorfs.com/ontology/html.owl#Html">
+        <rdfs:subClassOf rdf:resource="http://www.vitorfs.com/ontology/html.owl#StructureTag"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasChild"/>
+                <onClass rdf:resource="http://www.vitorfs.com/ontology/html.owl#Body"/>
+                <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasChild"/>
+                <onClass rdf:resource="http://www.vitorfs.com/ontology/html.owl#Head"/>
+                <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasParent"/>
+                <onClass rdf:resource="http://www.vitorfs.com/ontology/html.owl#Tag"/>
+                <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</qualifiedCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#I -->
+
+    <Class rdf:about="http://www.vitorfs.com/ontology/html.owl#I">
+        <rdfs:subClassOf rdf:resource="http://www.vitorfs.com/ontology/html.owl#Formatter"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasFontStyle"/>
+                <hasValue>italic</hasValue>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#Img -->
+
+    <Class rdf:about="http://www.vitorfs.com/ontology/html.owl#Img">
+        <rdfs:subClassOf rdf:resource="http://www.vitorfs.com/ontology/html.owl#ContentTag"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasChild"/>
+                <onClass rdf:resource="http://www.vitorfs.com/ontology/html.owl#Tag"/>
+                <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</qualifiedCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#Input -->
+
+    <Class rdf:about="http://www.vitorfs.com/ontology/html.owl#Input">
+        <rdfs:subClassOf rdf:resource="http://www.vitorfs.com/ontology/html.owl#Forms"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasFormParent"/>
+                <onClass rdf:resource="http://www.vitorfs.com/ontology/html.owl#Form"/>
+                <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasFormChild"/>
+                <onClass rdf:resource="http://www.vitorfs.com/ontology/html.owl#Tag"/>
+                <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</qualifiedCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasInputType"/>
+                        <hasValue>checkbox</hasValue>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasInputType"/>
+                        <hasValue>password</hasValue>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasInputType"/>
+                        <hasValue>radio</hasValue>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasInputType"/>
+                        <hasValue>text</hasValue>
+                    </Restriction>
+                </unionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#Label -->
+
+    <Class rdf:about="http://www.vitorfs.com/ontology/html.owl#Label">
+        <rdfs:subClassOf rdf:resource="http://www.vitorfs.com/ontology/html.owl#Forms"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasFormParent"/>
+                <onClass rdf:resource="http://www.vitorfs.com/ontology/html.owl#Form"/>
+                <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#Layout -->
+
+    <Class rdf:about="http://www.vitorfs.com/ontology/html.owl#Layout">
+        <rdfs:subClassOf rdf:resource="http://www.vitorfs.com/ontology/html.owl#ContentTag"/>
+    </Class>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#Li -->
+
+    <Class rdf:about="http://www.vitorfs.com/ontology/html.owl#Li">
+        <rdfs:subClassOf rdf:resource="http://www.vitorfs.com/ontology/html.owl#List"/>
+        <rdfs:subClassOf>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasListParent"/>
+                        <onClass rdf:resource="http://www.vitorfs.com/ontology/html.owl#Ol"/>
+                        <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasListParent"/>
+                        <onClass rdf:resource="http://www.vitorfs.com/ontology/html.owl#Ul"/>
+                        <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
+                    </Restriction>
+                </unionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#Link -->
+
+    <Class rdf:about="http://www.vitorfs.com/ontology/html.owl#Link">
+        <rdfs:subClassOf rdf:resource="http://www.vitorfs.com/ontology/html.owl#MetaTag"/>
+    </Class>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#List -->
+
+    <Class rdf:about="http://www.vitorfs.com/ontology/html.owl#List">
+        <rdfs:subClassOf rdf:resource="http://www.vitorfs.com/ontology/html.owl#ContentTag"/>
+    </Class>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#Meta -->
+
+    <Class rdf:about="http://www.vitorfs.com/ontology/html.owl#Meta">
+        <rdfs:subClassOf rdf:resource="http://www.vitorfs.com/ontology/html.owl#MetaTag"/>
+    </Class>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#MetaTag -->
+
+    <Class rdf:about="http://www.vitorfs.com/ontology/html.owl#MetaTag">
+        <rdfs:subClassOf rdf:resource="http://www.vitorfs.com/ontology/html.owl#Tag"/>
+    </Class>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#Ol -->
+
+    <Class rdf:about="http://www.vitorfs.com/ontology/html.owl#Ol">
+        <rdfs:subClassOf rdf:resource="http://www.vitorfs.com/ontology/html.owl#List"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasListChild"/>
+                <someValuesFrom rdf:resource="http://www.vitorfs.com/ontology/html.owl#Li"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#isOrdered"/>
+                <someValuesFrom rdf:resource="http://www.vitorfs.com/ontology/html.owl#OrderedList"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#OrderedList -->
+
+    <Class rdf:about="http://www.vitorfs.com/ontology/html.owl#OrderedList">
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasListChild"/>
+                <someValuesFrom rdf:resource="http://www.vitorfs.com/ontology/html.owl#Li"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasListParent"/>
+                <onClass rdf:resource="http://www.vitorfs.com/ontology/html.owl#Ol"/>
+                <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#P -->
+
+    <Class rdf:about="http://www.vitorfs.com/ontology/html.owl#P">
+        <rdfs:subClassOf rdf:resource="http://www.vitorfs.com/ontology/html.owl#Typography"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasFontWeight"/>
+                <hasValue rdf:datatype="&xsd;integer">400</hasValue>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasFontSize"/>
+                <hasValue rdf:datatype="&xsd;integer">14</hasValue>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#PasswordInput -->
+
+    <Class rdf:about="http://www.vitorfs.com/ontology/html.owl#PasswordInput">
+        <equivalentClass>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.vitorfs.com/ontology/html.owl#FormInputs"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasInputType"/>
+                        <hasValue>password</hasValue>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </equivalentClass>
+    </Class>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#RadioInput -->
+
+    <Class rdf:about="http://www.vitorfs.com/ontology/html.owl#RadioInput">
+        <equivalentClass>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.vitorfs.com/ontology/html.owl#FormInputs"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasInputType"/>
+                        <hasValue>radio</hasValue>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </equivalentClass>
+    </Class>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#Script -->
+
+    <Class rdf:about="http://www.vitorfs.com/ontology/html.owl#Script">
+        <rdfs:subClassOf rdf:resource="http://www.vitorfs.com/ontology/html.owl#MetaTag"/>
+    </Class>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#Span -->
+
+    <Class rdf:about="http://www.vitorfs.com/ontology/html.owl#Span">
+        <rdfs:subClassOf rdf:resource="http://www.vitorfs.com/ontology/html.owl#Layout"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasDisplay"/>
+                <hasValue>inline</hasValue>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#Strong -->
+
+    <Class rdf:about="http://www.vitorfs.com/ontology/html.owl#Strong">
+        <rdfs:subClassOf rdf:resource="http://www.vitorfs.com/ontology/html.owl#Formatter"/>
+    </Class>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#StructureTag -->
+
+    <Class rdf:about="http://www.vitorfs.com/ontology/html.owl#StructureTag">
+        <rdfs:subClassOf rdf:resource="http://www.vitorfs.com/ontology/html.owl#Tag"/>
+    </Class>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#Style -->
+
+    <Class rdf:about="http://www.vitorfs.com/ontology/html.owl#Style">
+        <rdfs:subClassOf rdf:resource="http://www.vitorfs.com/ontology/html.owl#MetaTag"/>
+    </Class>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#Table -->
+
+    <Class rdf:about="http://www.vitorfs.com/ontology/html.owl#Table">
+        <rdfs:subClassOf rdf:resource="http://www.vitorfs.com/ontology/html.owl#Tabular"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasTableChild"/>
+                <someValuesFrom rdf:resource="http://www.vitorfs.com/ontology/html.owl#Tr"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#Tabular -->
+
+    <Class rdf:about="http://www.vitorfs.com/ontology/html.owl#Tabular">
+        <rdfs:subClassOf rdf:resource="http://www.vitorfs.com/ontology/html.owl#ContentTag"/>
+    </Class>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#Tag -->
+
+    <Class rdf:about="http://www.vitorfs.com/ontology/html.owl#Tag"/>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#Td -->
+
+    <Class rdf:about="http://www.vitorfs.com/ontology/html.owl#Td">
+        <rdfs:subClassOf rdf:resource="http://www.vitorfs.com/ontology/html.owl#Tabular"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasTableParent"/>
+                <onClass rdf:resource="http://www.vitorfs.com/ontology/html.owl#Tr"/>
+                <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#TextInput -->
+
+    <Class rdf:about="http://www.vitorfs.com/ontology/html.owl#TextInput">
+        <equivalentClass>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.vitorfs.com/ontology/html.owl#FormInputs"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasInputType"/>
+                        <hasValue>text</hasValue>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </equivalentClass>
+    </Class>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#Th -->
+
+    <Class rdf:about="http://www.vitorfs.com/ontology/html.owl#Th">
+        <rdfs:subClassOf rdf:resource="http://www.vitorfs.com/ontology/html.owl#Tabular"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasTableParent"/>
+                <onClass rdf:resource="http://www.vitorfs.com/ontology/html.owl#Tr"/>
+                <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#Title -->
+
+    <Class rdf:about="http://www.vitorfs.com/ontology/html.owl#Title">
+        <rdfs:subClassOf rdf:resource="http://www.vitorfs.com/ontology/html.owl#MetaTag"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasDisplay"/>
+                <hasValue>none</hasValue>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#Tr -->
+
+    <Class rdf:about="http://www.vitorfs.com/ontology/html.owl#Tr">
+        <rdfs:subClassOf rdf:resource="http://www.vitorfs.com/ontology/html.owl#Tabular"/>
+        <rdfs:subClassOf>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasTableChild"/>
+                        <someValuesFrom rdf:resource="http://www.vitorfs.com/ontology/html.owl#Td"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasTableChild"/>
+                        <someValuesFrom rdf:resource="http://www.vitorfs.com/ontology/html.owl#Th"/>
+                    </Restriction>
+                </unionOf>
+            </Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasTableParent"/>
+                <onClass rdf:resource="http://www.vitorfs.com/ontology/html.owl#Table"/>
+                <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#Typography -->
+
+    <Class rdf:about="http://www.vitorfs.com/ontology/html.owl#Typography">
+        <rdfs:subClassOf rdf:resource="http://www.vitorfs.com/ontology/html.owl#ContentTag"/>
+    </Class>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#U -->
+
+    <Class rdf:about="http://www.vitorfs.com/ontology/html.owl#U">
+        <rdfs:subClassOf rdf:resource="http://www.vitorfs.com/ontology/html.owl#Formatter"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasTextDecoration"/>
+                <hasValue>underline</hasValue>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.vitorfs.com/ontology/html.owl#Ul -->
+
+    <Class rdf:about="http://www.vitorfs.com/ontology/html.owl#Ul">
+        <rdfs:subClassOf rdf:resource="http://www.vitorfs.com/ontology/html.owl#List"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#hasListChild"/>
+                <someValuesFrom rdf:resource="http://www.vitorfs.com/ontology/html.owl#Li"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.vitorfs.com/ontology/html.owl#isDesordered"/>
+                <someValuesFrom rdf:resource="http://www.vitorfs.com/ontology/html.owl#DesorderedList"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.vitorfs.com/ontology/html.owl#Link"/>
+            <rdf:Description rdf:about="http://www.vitorfs.com/ontology/html.owl#Meta"/>
+            <rdf:Description rdf:about="http://www.vitorfs.com/ontology/html.owl#Script"/>
+            <rdf:Description rdf:about="http://www.vitorfs.com/ontology/html.owl#Style"/>
+            <rdf:Description rdf:about="http://www.vitorfs.com/ontology/html.owl#Title"/>
+        </members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.vitorfs.com/ontology/html.owl#Button"/>
+            <rdf:Description rdf:about="http://www.vitorfs.com/ontology/html.owl#Form"/>
+            <rdf:Description rdf:about="http://www.vitorfs.com/ontology/html.owl#Input"/>
+            <rdf:Description rdf:about="http://www.vitorfs.com/ontology/html.owl#Label"/>
+        </members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.vitorfs.com/ontology/html.owl#A"/>
+            <rdf:Description rdf:about="http://www.vitorfs.com/ontology/html.owl#Br"/>
+            <rdf:Description rdf:about="http://www.vitorfs.com/ontology/html.owl#Formatter"/>
+            <rdf:Description rdf:about="http://www.vitorfs.com/ontology/html.owl#Forms"/>
+            <rdf:Description rdf:about="http://www.vitorfs.com/ontology/html.owl#Hr"/>
+            <rdf:Description rdf:about="http://www.vitorfs.com/ontology/html.owl#Img"/>
+            <rdf:Description rdf:about="http://www.vitorfs.com/ontology/html.owl#Layout"/>
+            <rdf:Description rdf:about="http://www.vitorfs.com/ontology/html.owl#List"/>
+            <rdf:Description rdf:about="http://www.vitorfs.com/ontology/html.owl#Tabular"/>
+            <rdf:Description rdf:about="http://www.vitorfs.com/ontology/html.owl#Typography"/>
+        </members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.vitorfs.com/ontology/html.owl#CheckboxInput"/>
+            <rdf:Description rdf:about="http://www.vitorfs.com/ontology/html.owl#PasswordInput"/>
+            <rdf:Description rdf:about="http://www.vitorfs.com/ontology/html.owl#RadioInput"/>
+            <rdf:Description rdf:about="http://www.vitorfs.com/ontology/html.owl#TextInput"/>
+        </members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.vitorfs.com/ontology/html.owl#Table"/>
+            <rdf:Description rdf:about="http://www.vitorfs.com/ontology/html.owl#Td"/>
+            <rdf:Description rdf:about="http://www.vitorfs.com/ontology/html.owl#Th"/>
+            <rdf:Description rdf:about="http://www.vitorfs.com/ontology/html.owl#Tr"/>
+        </members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.vitorfs.com/ontology/html.owl#Body"/>
+            <rdf:Description rdf:about="http://www.vitorfs.com/ontology/html.owl#Head"/>
+            <rdf:Description rdf:about="http://www.vitorfs.com/ontology/html.owl#Html"/>
+        </members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.vitorfs.com/ontology/html.owl#H1"/>
+            <rdf:Description rdf:about="http://www.vitorfs.com/ontology/html.owl#H2"/>
+            <rdf:Description rdf:about="http://www.vitorfs.com/ontology/html.owl#H3"/>
+            <rdf:Description rdf:about="http://www.vitorfs.com/ontology/html.owl#H4"/>
+            <rdf:Description rdf:about="http://www.vitorfs.com/ontology/html.owl#H5"/>
+            <rdf:Description rdf:about="http://www.vitorfs.com/ontology/html.owl#H6"/>
+            <rdf:Description rdf:about="http://www.vitorfs.com/ontology/html.owl#P"/>
+        </members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.vitorfs.com/ontology/html.owl#Li"/>
+            <rdf:Description rdf:about="http://www.vitorfs.com/ontology/html.owl#Ol"/>
+            <rdf:Description rdf:about="http://www.vitorfs.com/ontology/html.owl#Ul"/>
+        </members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.vitorfs.com/ontology/html.owl#Em"/>
+            <rdf:Description rdf:about="http://www.vitorfs.com/ontology/html.owl#Strong"/>
+            <rdf:Description rdf:about="http://www.vitorfs.com/ontology/html.owl#U"/>
+        </members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
