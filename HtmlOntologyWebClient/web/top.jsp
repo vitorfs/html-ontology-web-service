@@ -31,7 +31,6 @@
                       <a href="classes_assertadas.jsp" class="list-group-item">Classes Assertadas</a>
                       <a href="consulta_ontologia.jsp" class="list-group-item">Consulta Ontologia (SparQL)</a>
                       <a href="validar_semantica.jsp" class="list-group-item">Validar Semântica</a>
-                      <a href="anotacao_semantica.jsp" class="list-group-item">Anotação Semântica</a>
                     </div>
                 </div>
                 <div class="col-lg-9">

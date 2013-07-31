@@ -16,6 +16,12 @@
 <message name="obterSubclassesResponse">
 <part name="parameters" element="tns:obterSubclassesResponse"/>
 </message>
+<message name="validarSemantica">
+<part name="parameters" element="tns:validarSemantica"/>
+</message>
+<message name="validarSemanticaResponse">
+<part name="parameters" element="tns:validarSemanticaResponse"/>
+</message>
 <portType name="HtmlService">
 <operation name="listClasses">
 <input wsam:Action="http://ws.vitorfs.com/HtmlService/listClassesRequest" message="tns:listClasses"/>
@@ -24,6 +30,10 @@
 <operation name="obterSubclasses">
 <input wsam:Action="http://ws.vitorfs.com/HtmlService/obterSubclassesRequest" message="tns:obterSubclasses"/>
 <output wsam:Action="http://ws.vitorfs.com/HtmlService/obterSubclassesResponse" message="tns:obterSubclassesResponse"/>
+</operation>
+<operation name="validarSemantica">
+<input wsam:Action="http://ws.vitorfs.com/HtmlService/validarSemanticaRequest" message="tns:validarSemantica"/>
+<output wsam:Action="http://ws.vitorfs.com/HtmlService/validarSemanticaResponse" message="tns:validarSemanticaResponse"/>
 </operation>
 </portType>
 <binding name="HtmlServicePortBinding" type="tns:HtmlService">
@@ -38,6 +48,15 @@
 </output>
 </operation>
 <operation name="obterSubclasses">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="validarSemantica">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

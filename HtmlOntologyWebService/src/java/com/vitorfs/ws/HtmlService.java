@@ -95,12 +95,37 @@ public class HtmlService {
                 tag.setName(r.getLocalName());
                 tag.setNameSpace(r.getNameSpace());
                 tag.setUri(r.getURI());
-                System.out.println(r.getLocalName());
                 tags.add(tag);
             }
         }
         qe.close();
         return tags;
+    }
+    
+    @WebMethod(operationName = "validarSemantica")
+    public boolean validarSemantica(String tagName, String tipo) {
+        boolean retorno = false;
+        String queryString = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> "+
+        "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> "+
+        "select ?Classe "+
+        "where { "+
+        "?Classe rdfs:subClassOf <" + BASE_URI + tipo + "> "+
+        "} \n ";
+
+        Query query = QueryFactory.create(queryString);
+        QueryExecution qe = QueryExecutionFactory.create(query, model);
+        com.hp.hpl.jena.query.ResultSet results = qe.execSelect();
+        while (results.hasNext()) {
+            QuerySolution qs = results.next();
+            Resource r = qs.getResource("?Classe");
+            if (r.getLocalName() != null) {
+                if (r.getLocalName().toUpperCase().equals(tagName.toUpperCase())) {
+                    retorno = true;
+                }
+            }
+        }
+        qe.close();
+        return retorno;
     }
     
     public static void main(String[] args){

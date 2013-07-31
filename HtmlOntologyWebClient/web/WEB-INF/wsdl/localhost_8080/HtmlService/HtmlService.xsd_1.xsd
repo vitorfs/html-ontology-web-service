@@ -8,6 +8,23 @@
 
 <xs:element name="obterSubclassesResponse" type="tns:obterSubclassesResponse"/>
 
+<xs:element name="validarSemantica" type="tns:validarSemantica"/>
+
+<xs:element name="validarSemanticaResponse" type="tns:validarSemanticaResponse"/>
+
+<xs:complexType name="validarSemantica">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+<xs:element name="arg1" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="validarSemanticaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
 <xs:complexType name="obterSubclasses">
 <xs:sequence>
 <xs:element name="arg0" type="xs:string" minOccurs="0"/>
